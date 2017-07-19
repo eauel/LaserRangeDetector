@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaserScannerForm));
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textDistance = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textEndAngle = new System.Windows.Forms.NumericUpDown();
+            this.textStartAngle = new System.Windows.Forms.NumericUpDown();
+            this.boxEndAngle = new System.Windows.Forms.Label();
+            this.boxStartAngle = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonOffEmail = new System.Windows.Forms.Button();
@@ -40,17 +48,12 @@
             this.buttonMotorOn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.boxStartAngle = new System.Windows.Forms.Label();
-            this.boxEndAngle = new System.Windows.Forms.Label();
-            this.textStartAngle = new System.Windows.Forms.NumericUpDown();
-            this.textEndAngle = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textDistnace = new System.Windows.Forms.NumericUpDown();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textStartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEndAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDistnace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textStartAngle)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxImage
@@ -65,7 +68,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textDistnace);
+            this.panel1.Controls.Add(this.textDistance);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textEndAngle);
             this.panel1.Controls.Add(this.textStartAngle);
@@ -85,6 +88,84 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 574);
             this.panel1.TabIndex = 1;
+            // 
+            // textDistance
+            // 
+            this.textDistance.Location = new System.Drawing.Point(31, 504);
+            this.textDistance.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.textDistance.Name = "textDistance";
+            this.textDistance.Size = new System.Drawing.Size(120, 20);
+            this.textDistance.TabIndex = 16;
+            this.textDistance.Value = new decimal(new int[] {
+            2550,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 468);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Distance";
+            // 
+            // textEndAngle
+            // 
+            this.textEndAngle.Location = new System.Drawing.Point(31, 426);
+            this.textEndAngle.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.textEndAngle.Name = "textEndAngle";
+            this.textEndAngle.Size = new System.Drawing.Size(120, 20);
+            this.textEndAngle.TabIndex = 14;
+            this.textEndAngle.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            // 
+            // textStartAngle
+            // 
+            this.textStartAngle.Location = new System.Drawing.Point(31, 345);
+            this.textStartAngle.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.textStartAngle.Name = "textStartAngle";
+            this.textStartAngle.Size = new System.Drawing.Size(120, 20);
+            this.textStartAngle.TabIndex = 13;
+            this.textStartAngle.Value = new decimal(new int[] {
+            66,
+            0,
+            0,
+            0});
+            // 
+            // boxEndAngle
+            // 
+            this.boxEndAngle.AutoSize = true;
+            this.boxEndAngle.Location = new System.Drawing.Point(31, 388);
+            this.boxEndAngle.Name = "boxEndAngle";
+            this.boxEndAngle.Size = new System.Drawing.Size(56, 13);
+            this.boxEndAngle.TabIndex = 12;
+            this.boxEndAngle.Text = "End Angle";
+            // 
+            // boxStartAngle
+            // 
+            this.boxStartAngle.AutoSize = true;
+            this.boxStartAngle.Location = new System.Drawing.Point(31, 319);
+            this.boxStartAngle.Name = "boxStartAngle";
+            this.boxStartAngle.Size = new System.Drawing.Size(59, 13);
+            this.boxStartAngle.TabIndex = 11;
+            this.boxStartAngle.Text = "Start Angle";
             // 
             // button4
             // 
@@ -184,83 +265,12 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.buttonUpdate);
             // 
-            // boxStartAngle
+            // notifyIcon
             // 
-            this.boxStartAngle.AutoSize = true;
-            this.boxStartAngle.Location = new System.Drawing.Point(31, 319);
-            this.boxStartAngle.Name = "boxStartAngle";
-            this.boxStartAngle.Size = new System.Drawing.Size(59, 13);
-            this.boxStartAngle.TabIndex = 11;
-            this.boxStartAngle.Text = "Start Angle";
-            // 
-            // boxEndAngle
-            // 
-            this.boxEndAngle.AutoSize = true;
-            this.boxEndAngle.Location = new System.Drawing.Point(31, 388);
-            this.boxEndAngle.Name = "boxEndAngle";
-            this.boxEndAngle.Size = new System.Drawing.Size(56, 13);
-            this.boxEndAngle.TabIndex = 12;
-            this.boxEndAngle.Text = "End Angle";
-            // 
-            // textStartAngle
-            // 
-            this.textStartAngle.Location = new System.Drawing.Point(31, 345);
-            this.textStartAngle.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.textStartAngle.Name = "textStartAngle";
-            this.textStartAngle.Size = new System.Drawing.Size(120, 20);
-            this.textStartAngle.TabIndex = 13;
-            this.textStartAngle.Value = new decimal(new int[] {
-            61,
-            0,
-            0,
-            0});
-            // 
-            // textEndAngle
-            // 
-            this.textEndAngle.Location = new System.Drawing.Point(31, 426);
-            this.textEndAngle.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.textEndAngle.Name = "textEndAngle";
-            this.textEndAngle.Size = new System.Drawing.Size(120, 20);
-            this.textEndAngle.TabIndex = 14;
-            this.textEndAngle.Value = new decimal(new int[] {
-            91,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 468);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Distance";
-            // 
-            // textDistnace
-            // 
-            this.textDistnace.Location = new System.Drawing.Point(31, 504);
-            this.textDistnace.Maximum = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            this.textDistnace.Name = "textDistnace";
-            this.textDistnace.Size = new System.Drawing.Size(120, 20);
-            this.textDistnace.TabIndex = 16;
-            this.textDistnace.Value = new decimal(new int[] {
-            2500,
-            0,
-            0,
-            0});
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "Laser Detector";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
             // LaserScannerForm
             // 
@@ -276,9 +286,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textStartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textDistance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEndAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDistnace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textStartAngle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,8 +311,9 @@
         private System.Windows.Forms.Label boxStartAngle;
         private System.Windows.Forms.NumericUpDown textEndAngle;
         private System.Windows.Forms.NumericUpDown textStartAngle;
-        private System.Windows.Forms.NumericUpDown textDistnace;
+        private System.Windows.Forms.NumericUpDown textDistance;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 

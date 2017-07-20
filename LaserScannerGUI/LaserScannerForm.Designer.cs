@@ -101,7 +101,7 @@
             this.textDistance.Size = new System.Drawing.Size(120, 20);
             this.textDistance.TabIndex = 16;
             this.textDistance.Value = new decimal(new int[] {
-            2550,
+            2000,
             0,
             0,
             0});
@@ -127,7 +127,7 @@
             this.textEndAngle.Size = new System.Drawing.Size(120, 20);
             this.textEndAngle.TabIndex = 14;
             this.textEndAngle.Value = new decimal(new int[] {
-            90,
+            333,
             0,
             0,
             0});
@@ -144,7 +144,7 @@
             this.textStartAngle.Size = new System.Drawing.Size(120, 20);
             this.textStartAngle.TabIndex = 13;
             this.textStartAngle.Value = new decimal(new int[] {
-            66,
+            307,
             0,
             0,
             0});
@@ -281,7 +281,9 @@
             this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.panel1);
             this.Name = "LaserScannerForm";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LaserScannerForm_FormClosing);
             this.Load += new System.EventHandler(this.LaserScannerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -51,6 +51,7 @@
     <Compile Include="LaserScannerForm.Designer.cs">
       <DependentUpon>LaserScannerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LEDStripController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LaserScannerForm.resx">

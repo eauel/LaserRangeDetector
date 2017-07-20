@@ -20,7 +20,7 @@ namespace LaserScannerGUI
 
         void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-
+            port.DiscardInBuffer();
         }
 
         public void connect()
